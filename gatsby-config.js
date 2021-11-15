@@ -11,5 +11,16 @@ module.exports = {
         spaceId: "t1i0qcjcfqs8",
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Rich Text`,
+        short_name: `Richt Text tries`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+      },
+    },
   ],
 };
