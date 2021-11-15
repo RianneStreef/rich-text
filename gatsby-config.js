@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
@@ -7,8 +11,8 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "oXEfERPiYecqYnQxzd7dZeNEZ6IHSq-toBTTwFQj73E",
-        spaceId: "t1i0qcjcfqs8",
+        accessToken: process.env.GATSBY_CONTENTFUL_TOKEN,
+        spaceId: process.env.GATSBY_CONTENTFUL_ID,
       },
     },
     {
@@ -20,6 +24,7 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
+        icon: `src/images/icon.png`,
       },
     },
   ],
